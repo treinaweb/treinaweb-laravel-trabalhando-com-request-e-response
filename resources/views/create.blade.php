@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="{{ route('clientes.store') }}" method="POST">
+    <form action="{{ route('clientes.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
     
         <label for="nome">Nome: </label>
@@ -16,6 +16,10 @@
 
         <label for="idade">Idade: </label>
         <input type="text" name="idade">
+        <br/>
+
+        <label for="foto">Foto: </label>
+        <input type="file" name="foto">
         <br/>
 
         <button type="submit">Enviar</button>
