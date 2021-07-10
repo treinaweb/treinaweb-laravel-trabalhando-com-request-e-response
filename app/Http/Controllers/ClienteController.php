@@ -24,10 +24,6 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        if ($request->filled(['nome', 'idade'])) {
-            dd('o campo nome e idade tem valor');
-        }
-
-        dd('o campo nome e idade não tem valor');
+        dd($request->all());
     }
 }
