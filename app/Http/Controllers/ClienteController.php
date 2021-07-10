@@ -36,6 +36,9 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        //processo para criação de um novo cliente
+
+        return redirect()->route('clientes.create')
+                         ->with('mensagem', 'Cliente criado com sucesso');
     }
 }
