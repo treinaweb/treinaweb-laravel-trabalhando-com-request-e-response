@@ -24,6 +24,6 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->foto->store('public'));
+        dd($request->all());
     }
 }
