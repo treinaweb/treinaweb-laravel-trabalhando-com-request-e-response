@@ -7,22 +7,11 @@ use Illuminate\Http\Response;
 
 class ClienteController extends Controller
 {
-    public function index(Response $response)
+    public function index()
     {
-        $clientes = [
-            "Joao" => ['nome' => 'João da Silva'],
-            "Maria" => ['nome' => 'Maria da Silva']
-        ];
-
-        // $dadosString = json_encode($clientes);
-
-        // return $response->setContent($dadosString)
-        //                 ->header('Content-Type', 'application/json')
-        //                 ->setStatusCode(200);
-
-        // return response()->json($clientes);
-
-        return $clientes;
+        return response()->file(
+            storage_path('app/public/foto.png')
+        );
     }
 
     /**
