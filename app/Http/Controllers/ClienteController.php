@@ -9,9 +9,7 @@ class ClienteController extends Controller
 {
     public function index()
     {
-        return response()->file(
-            storage_path('app/public/foto.png')
-        );
+        return redirect()->away('https://treinaweb.com.br');
     }
 
     /**
