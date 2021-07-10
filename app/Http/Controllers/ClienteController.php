@@ -9,13 +9,20 @@ class ClienteController extends Controller
 {
     public function index(Response $response)
     {
-        // return $response->setContent('<h1>olá mundo</h1>')
-        //                 ->setStatusCode(200)
-        //                 ->header('Content-Type', 'text/html');
+        $clientes = [
+            "Joao" => ['nome' => 'João da Silva'],
+            "Maria" => ['nome' => 'Maria da Silva']
+        ];
 
-        // return response('<h1>olá mundo</h1>');
+        // $dadosString = json_encode($clientes);
 
-        return '<h1>olá mundo</h1>';
+        // return $response->setContent($dadosString)
+        //                 ->header('Content-Type', 'application/json')
+        //                 ->setStatusCode(200);
+
+        // return response()->json($clientes);
+
+        return $clientes;
     }
 
     /**
