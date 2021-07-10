@@ -25,8 +25,7 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         dd(
-            $request->input('nome', 'nome não definido'),
-            $request->input('idade', 'idade não definida')
+            $request->all()
         );
     }
 }
